@@ -1,0 +1,14 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+h1{
+    text-align: center;
+}
+
+.icon{
+    width: 30px;
+    margin-left: 10px;
+    cursor: pointer;
+}

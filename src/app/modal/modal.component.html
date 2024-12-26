@@ -1,0 +1,37 @@
+<div class="touch" (click) = "service.showdialog = false"></div>
+<div class="container">
+    <div class="header">Details</div>
+
+    <div class="details">
+        <ng-container *ngIf="!service.editMode; else editTemplate">
+            <p>Name: {{ service.selectedData?.name }}</p>
+            <p>Language: {{ service.selectedData?.language }}</p>
+            <p>ID: {{ service.selectedData?.id }}</p>
+            <p>Version: {{ service.selectedData?.version }}</p>
+        </ng-container>
+        <ng-template #editTemplate>
+            <p>
+              Name: 
+              <input [(ngModel)]="service.selectedData.name">
+            </p>
+            <p>
+              Language: 
+              <input [(ngModel)]="service.selectedData.language">
+            </p>
+            <p>
+              ID: 
+              <input [(ngModel)]="service.selectedData.id">
+            </p>
+            <p>
+              Version: 
+              <input [(ngModel)]="service.selectedData.version">
+            </p>
+        </ng-template>
+    </div>
+
+    <div class="footer">
+        <button class="btn" *ngIf="!service.editMode" (click)="service.showdialog = false">Ok</button>
+        <button class="btn" *ngIf="!service.editMode" (click)="enableEdit()">Edit</button>
+        <button class="btn" (click)="service.showdialog = false">Cancel</button>
+    </div>
+</div>

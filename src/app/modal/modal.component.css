@@ -1,0 +1,60 @@
+.touch{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+
+.container{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    margin: 150px 500px;
+    width : 500px;
+    height: 450px;
+    box-shadow: 5px 5px 10px #ccc;
+    border-radius: 10px;
+    background-color: #fff;    
+}
+
+.header{
+    font-size: 22px;
+    text-align: center;
+    font-weight: bold;
+    position: relative;
+    top: 15px;
+    border-bottom: 2px solid #ccc;
+}
+
+.details{
+    position: relative;
+    top: 30px;
+    left: 30px;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    border-top: 2px solid #ccc;
+    margin-top: 210px;
+    padding: 20px 30px;
+
+    .btn{
+        padding: 8px 18px;
+        color: white;
+        background-color: rgb(58, 58, 241);
+        border: 0px;
+        border-radius: 10px;
+    }
+}
+
+
+
+
+
+

@@ -1,0 +1,26 @@
+<h1>Http API Call</h1><br>
+<div>
+  <table border = "1">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Language</th>
+        <th>ID</th>
+        <th>Version</th>
+        <th>Modify</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor = "let d of data">
+        <td>{{ d.name }}</td>
+        <td>{{ d.language }}</td>
+        <td>{{ d.id }}</td>
+        <td>{{ d.version }}</td>
+        <td><img class="icon" (click)="service.selectData(d); service.showdialog = true" src="https://media.istockphoto.com/id/1192499077/vector/blue-round-information-icon-button-on-a-white-background.jpg?s=612x612&w=0&k=20&c=SzvqyIze_CsGlUisJyrOcGMZdLjzG5EH21twttTvQ6s=" alt=""></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<app-modal *ngIf = "service.showdialog"></app-modal>
